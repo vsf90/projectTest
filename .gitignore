@@ -1,0 +1,60 @@
+# Java artifacts
+# Compiled classes
+*.class
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Build tools artifacts
+# Ant
+build/
+classes/
+dist/
+build.properties
+# Maven
+target/
+release.properties
+# Gradle
+.gradle
+# SBT
+.history
+
+# IDE artifacts
+# Eclipse
+.classpath
+.externalToolBuilders/
+.metadata/
+.packaging
+.project
+.settings/
+*.jpage
+# IntelliJ IDEA
+.idea
+*.iml
+# NetBeans
+nbproject
+# Apple XCode
+*~.nib
+*.pbxuser
+*.perspective
+*.perspectivev3
+
+# Old SCM tools artifacts
+# Subversion
+.svn/
+# CVS
+CVS/
+
+# Operating systems specific stuff
+# Mac OS X
+.DS_Store
+.Trash/
+# Windows
+Thumbs.db
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
