@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>fr.trans</groupId>
+    <artifactId>trans-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>trans-web</artifactId>
+  <packaging>war</packaging>
+
+  <name>Trans WebApp</name>
+
+  <dependencies>
+    <!-- Trans dependencies: Do NOT reference any Trans module as these
+         should be deployed as Datalift modules, by dropping the JARs
+         into the modules folder of the Datalift home directory. -->
+
+    <!-- Datalift dependencies: Build Trans WAR as an overlay onto
+         Datalift Core WAR, overriding some files (such as SecurityContext
+         implementation). -->
+    <dependency>
+      <groupId>org.datalift</groupId>
+      <artifactId>datalift-core</artifactId>
+      <version>${datalift.version}</version>
+      <type>war</type>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!-- Actually, no overlay configuration is needed! -->
+      <!-- plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <overlays>
+            <overlay>
+              <groupId>org.datalift</groupId>
+              <artifactId>datalift-core</artifactId>
+              <excludes>
+                <exclude>WEB-INF/classes/META-INF/services/org.datalift.fwk.security.SecurityContext</exclude>
+              </excludes>
+            </overlay>
+          </overlays>
+        </configuration>
+      </plugin -->
+
+      <plugin>
+        <groupId>com.coderplus.maven.plugins</groupId>
+        <artifactId>copy-rename-maven-plugin</artifactId>
+        <version>1.0</version>
+        <executions>
+          <execution>
+            <id>rename-war</id>
+            <phase>install</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <sourceFile>${project.build.directory}/${project.artifactId}-${project.version}.war</sourceFile>
+              <destinationFile>${project.build.directory}/trans.war</destinationFile>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+
+  </build>
+
+</project>

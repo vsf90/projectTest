@@ -31,10 +31,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
-  <!-- <modules> -->
-    <!-- <module>rmes-core</module> -->
-    <!-- <module>rmes-web</module> -->
-    <!-- <module>rmes-insee</module> -->
-  <!-- </modules> -->
+  <modules>
+    <!-- <module>trans-core</module> -->
+    <module>trans-web</module>
+  </modules>
 
 </project>
