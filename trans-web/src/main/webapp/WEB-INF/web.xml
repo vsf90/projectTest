@@ -262,7 +262,7 @@
   </login-config>
 <!--   <security-role> -->
 <!--     <description/> -->
-<!--     <role-name>user</role-name> -->
+<!--     <role-name>trans</role-name> -->
 <!--   </security-role> -->
   <security-role>
     <description>All user groups are mapped into appl. roles</description>

@@ -6,7 +6,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>fr.trans</groupId>
+    <groupId>com.trans</groupId>
     <artifactId>trans-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
@@ -65,7 +65,7 @@
             </goals>
             <configuration>
               <sourceFile>${project.build.directory}/${project.artifactId}-${project.version}.war</sourceFile>
-              <destinationFile>${project.build.directory}/trans.war</destinationFile>
+              <destinationFile>${project.build.directory}/web.war</destinationFile>
             </configuration>
           </execution>
         </executions>
