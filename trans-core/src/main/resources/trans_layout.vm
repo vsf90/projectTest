@@ -1,0 +1,28 @@
+#load("trans/resources")
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>$!page_title</title>
+		<!-- UTF8 character -->
+		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+		<!-- multiple devices -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!-- desactivate cache for browsers -->
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1970 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+		
+		
+		<!-- Javascript libraries -->
+		$!{addScript}
+	</head>
+	<body>
+		$screen_content
+		
+		<!-- scripts -->
+		#parse( $script_content )
+	</body>
+</html>
