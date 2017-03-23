@@ -31,6 +31,12 @@
       <artifactId>gson</artifactId>
       <version>${gson.version}</version>
     </dependency>
+    <!-- Mongodb driver -->
+	<dependency>
+	    <groupId>org.mongodb</groupId>
+	    <artifactId>mongo-java-driver</artifactId>
+	    <version>3.4.2</version>
+	</dependency>
     <!-- Unit tests -->
     <dependency>
       <groupId>junit</groupId>
